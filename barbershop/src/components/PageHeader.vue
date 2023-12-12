@@ -67,6 +67,7 @@ export default {
 
 .navbar {
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 100vw;
@@ -106,7 +107,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: $default_width;
     margin: auto;
 
 }
@@ -119,7 +120,7 @@ header {
 
 .logo img {
     width: 192px;
-    height: 70px;
+    height: $logo_height;
 
 }
 

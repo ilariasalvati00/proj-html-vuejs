@@ -1,10 +1,12 @@
 <script>
 import PageHeader from "./components/PageHeader.vue"
+import PageMain from "./components/PageMain.vue"
 import { store } from "./store.js"
 
 export default {
   components: {
-    PageHeader
+    PageHeader,
+    PageMain
   },
   data() {
     return {
@@ -21,6 +23,7 @@ export default {
 <template>
   <main>
     <PageHeader class="header" :menu="store.menulist"></PageHeader>
+    <PageMain></PageMain>
   </main>
 </template>
 
@@ -37,7 +40,7 @@ main {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
