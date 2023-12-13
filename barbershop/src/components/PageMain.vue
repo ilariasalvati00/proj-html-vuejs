@@ -39,6 +39,7 @@ export default {
         <a class="button" href="#"><span>MEET YOUR NEW BARBER</span></a>
         <img src="../assets/triangle.svg">
     </section>
+
     <section class="services">
         <h2>MENS GROOMING</h2>
         <h1>Services</h1>
@@ -63,11 +64,58 @@ export default {
             </div>
         </div>
         <a class="button" href="#"><span>READ ABOUT OUR SERVICES</span></a>
+        <img class="triangle" src="../assets/triangle.svg">
+    </section>
+
+    <section class="products">
+        <h2>WE HAVE YOU COVERED</h2>
+        <h1>Avada Grooming Products</h1>
+        <div class="container">
+            <div>
+                <img src="../assets/images/brush_dark-200x200.png" alt="">
+                <a href="#">
+                    <h1>Brush</h1>
+                </a>
+                <p>$15.00</p>
+            </div>
+            <div>
+                <img src="../assets/images/scissors-200x200.png" alt="">
+                <a href="#">
+                    <h1>Scissors</h1>
+                </a>
+                <p>$85.00</p>
+            </div>
+            <div>
+                <img src="../assets/images/hot_oil_dark-200x200.png" alt="">
+                <a href="#">
+                    <h1>Hot Oil</h1>
+                </a>
+                <p>$15.00</p>
+            </div>
+            <div>
+                <img src="../assets/images/straight_razor_dark-200x200.png" alt="">
+                <a href="#">
+                    <h1>Straight Razor</h1>
+                </a>
+                <p>$30.00</p>
+            </div>
+        </div>
+        <a class="button" href="#"><span>SHOP OUR PRODUCT RANGE</span></a>
     </section>
 </template>
 
 <style scoped lang="scss">
 @use "../styles/partials/_variables.scss" as *;
+
+
+.button {
+    @include bottone;
+    margin-bottom: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
 
 .jumbo {
     height: 120vh;
@@ -93,10 +141,6 @@ export default {
             color: $color_tertiary;
             font-size: 24px;
             margin: 2rem 1rem 1rem 0;
-        }
-
-        a {
-            @include bottone;
         }
     }
 }
@@ -127,11 +171,6 @@ export default {
         margin: 1rem 1rem 1rem 0;
     }
 
-    a {
-        @include bottone;
-        margin-bottom: 3rem;
-    }
-
     img {
         width: 100%;
     }
@@ -159,9 +198,9 @@ export default {
         margin: 1rem;
     }
 
-    a {
-        @include bottone;
-        margin-bottom: 2rem;
+    .triangle {
+        width: 100%;
+        filter: invert(92%);
     }
 
     .container {
@@ -217,6 +256,56 @@ export default {
             }
         }
 
+    }
+}
+
+.products {
+    background-image: url("../assets/images/avadabarbers-reviewsbackground.jpg");
+    background-size: cover;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+        color: $color_secondary;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    h1 {
+        color: hsla(0, 0%, 69%, 100%);
+        ;
+        font-family: 'Abril Fatface', serif;
+        font-size: 4em;
+        margin: 1rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 3rem;
+        width: $default_width;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Abril Fatface', serif;
+            font-size: 2em;
+            color: $color_secondary;
+        }
+
+        p {
+            color: $color_secondary;
+            font-size: 12px;
+        }
     }
 }
 </style>
