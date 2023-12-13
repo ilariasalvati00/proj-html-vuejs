@@ -1,12 +1,14 @@
 <script>
 import PageHeader from "./components/PageHeader.vue"
 import PageMain from "./components/PageMain.vue"
+import PageFooter from "./components/PageFooter.vue"
 import { store } from "./store.js"
 
 export default {
   components: {
     PageHeader,
-    PageMain
+    PageMain,
+    PageFooter
   },
   data() {
     return {
@@ -25,6 +27,7 @@ export default {
     <PageHeader class="header" :menu="store.menulist"></PageHeader>
     <PageMain></PageMain>
   </main>
+  <PageFooter class="footer"></PageFooter>
 </template>
 
 
@@ -33,10 +36,14 @@ export default {
 </style>
 
 <style scoped lang="scss">
+@use "./styles/partials/_variables.scss" as *;
+
 main {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+  margin-bottom: $footer_height;
+  z-index: 2;
 }
 
 .header {
@@ -44,5 +51,13 @@ main {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
 }
 </style>

@@ -5,3 +5,23 @@ $color_tertiary: rgba(104, 104, 104, 1);
 $color_accent: hsla(34, 44%, calc(55% - 10%), 100%);
 $logo_height: 70px;
 $default_width: 75%;
+
+$footer_height: calc(100vh - $logo_height);
+$bottom_footer_height: 100px;
+$top_footer_height: calc($footer_height - $bottom_footer_height);
+
+@mixin bottone {
+    padding: 1rem 2rem;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid $color_secondary;
+    color: $color_secondary;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 2rem 1rem 1rem 0;
+
+    :hover {
+        border-color: $color_accent;
+        color: $color_accent;
+    }
+}

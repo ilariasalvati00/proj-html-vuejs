@@ -43,23 +43,6 @@ export default {
 <style scoped lang="scss">
 @use "../styles/partials/_variables.scss" as *;
 
-
-@mixin bottone {
-    padding: 1rem 2rem;
-    display: inline-block;
-    text-decoration: none;
-    border: 2px solid $color_secondary;
-    color: $color_secondary;
-    font-size: 18px;
-    font-weight: 700;
-    margin: 2rem 1rem 1rem 0;
-
-    :hover {
-        border-color: $color_accent;
-        color: $color_accent;
-    }
-}
-
 .jumbo {
     height: 120vh;
     background-image: url("../assets/images/avadabarbers-homepage-hero-bg.jpg");
