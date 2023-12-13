@@ -46,6 +46,7 @@ main {
   z-index: 2;
 }
 
+/// footer che scorre preso da https://stackoverflow.com/questions/46399312/vuejs-footer-with-scroll-reveal
 .header {
   position: fixed;
   top: 0;

@@ -37,6 +37,32 @@ export default {
         <h2>AWARD WINNING</h2>
         <h1>Pro Barbers</h1>
         <a class="button" href="#"><span>MEET YOUR NEW BARBER</span></a>
+        <img src="../assets/triangle.svg">
+    </section>
+    <section class="services">
+        <h2>MENS GROOMING</h2>
+        <h1>Services</h1>
+        <div class="container">
+            <div class="col-left">
+                <img src="../assets/images/avadabarbers-trimcut-icon-before.png" alt="">
+                <h1>Trim & Cut</h1>
+                <p>Avada Barbers are experts in the lickety split trim and hair cut.</p>
+                <p>Quick but careful and ridiculously good looking.</p>
+            </div>
+            <div class="col-center">
+                <img src="../assets/images/avadabarbers-washndry-icon.png" alt="">
+                <h1>Wash & Dry</h1>
+                <p>Take a seat in our fine leather chairs, lean back and let us lather you a fresh head in a luxurious
+                    fashion.</p>
+            </div>
+            <div class="col-right">
+                <img src="../assets/images/avadabarbers-beardtrim-icon.png" alt="">
+                <h1>Beard Tidy</h1>
+                <p>Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada
+                    Barbers.</p>
+            </div>
+        </div>
+        <a class="button" href="#"><span>READ ABOUT OUR SERVICES</span></a>
     </section>
 </template>
 
@@ -83,7 +109,7 @@ export default {
 .intro {
     background-image: url("../assets/images/avadabarbers-about-introbackground.jpg");
     background-size: cover;
-    padding: 5rem;
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,6 +129,94 @@ export default {
 
     a {
         @include bottone;
+        margin-bottom: 3rem;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.services {
+    background-color: $color_default;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        color: $color_secondary;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    h1 {
+        color: hsla(0, 0%, 69%, 100%);
+        ;
+        font-family: 'Abril Fatface', serif;
+        font-size: 4em;
+        margin: 1rem;
+    }
+
+    a {
+        @include bottone;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: $default_width;
+        margin-bottom: 2rem;
+
+        h1 {
+            color: $color_secondary;
+            font-size: 2em;
+        }
+
+        p {
+            text-align: center;
+            max-width: calc(100vh/3);
+            line-height: 1.8;
+            font-size: 18px;
+            color: $color_tertiary;
+        }
+
+        .col-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 64px;
+            }
+        }
+
+        .col-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 84px;
+            }
+        }
+
+        .col-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 66px;
+            }
+        }
+
     }
 }
 </style>
